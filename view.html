@@ -5,15 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Details</title>
     <link rel="stylesheet" href="./public/css/styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: 20px auto; }
+        .navigation { margin-bottom: 20px; }
+        .navigation a { color: #007bff; text-decoration: none; }
+        .navigation a:hover { text-decoration: underline; }
+        .user-details { background-color: #f2f2f2; padding: 20px; border-radius: 5px; }
+        .user-details h2 { margin-bottom: 20px; }
+        .user-details p { margin-bottom: 10px; }
+        .edit-button { display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .edit-button:hover { background-color: #0056b3; }
+        .footer { text-align: center; margin-top: 50px; font-size: 0.8em; color: #777; }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>User Details</h1>
-        <!-- Display user details here -->
-        <p>Username: JohnDoe</p>
-        <p>Email: johndoe@example.com</p>
-        <!-- Other details -->
-        <a href="update.html">Edit</a>
+        <div class="navigation">
+            <a href="./index.html">Home</a> / <a href="./login.html">Đăng xuất</a>
+        </div>
+        <div class="user-details">
+            <h2>Màn hình chi tiết</h2>
+            <p><strong>Username:</strong> <span id="username"></span></p>
+            <p><strong>Email:</strong> <span id="email"></p>
+        </div>
+    </div>
+    
+    <script>
+        // Parse the URL parameters and update the user details
+        function updateUserDetailsFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get('username');
+            const email = params.get('email');
+    
+            if (username && email) {
+                document.getElementById('username').textContent = username;
+                document.getElementById('email').textContent = email;
+            }
+        }
+    
+        // Call the function on page load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            updateUserDetailsFromURL();
+        });
+    </script>
+
+    <div class="footer">
+        NGUYEN VAN LINH @01/2024
     </div>
 </body>
 </html>

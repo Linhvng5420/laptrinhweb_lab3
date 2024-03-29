@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update User</title>
-    <link rel="stylesheet" href="./public/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Programming - Registration</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .register-container { max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; }
+  .form-input { margin-bottom: 15px; }
+  .form-input label { display: block; margin-bottom: 5px; }
+  .form-input input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; }
+  .register-button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer; }
+  .register-button:hover { background-color: #218838; }
+  .navigation-bar { text-align: center; margin-bottom: 20px; }
+  .navigation-bar a { margin: 0 10px; color: #007bff; text-decoration: none; }
+  .navigation-bar a:hover { text-decoration: underline; }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Update User</h1>
-        <form action="update.php" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <!-- Other fields for updating user information -->
-            <input type="submit" value="Update">
-        </form>
+
+<div class="navigation-bar">
+  <a href="./index.html">Home</a>
+  <a href="./login.html">Login</a>
+</div>
+
+<div class="register-container">
+  <h1>Update</h1>
+  <form action="#" method="post">
+    <div class="form-input">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-input">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="form-input">
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+    </div>
+    <div class="form-input">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <button type="submit" class="register-button">Update</button>
+  </form>
+</div>
+
+<div
+      class="footer"
+      style="
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.8em;
+        color: #777;
+      "
+    >
+      NGUYEN VAN LINH @01/2024
     </div>
 </body>
 </html>
